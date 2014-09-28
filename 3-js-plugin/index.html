@@ -1,0 +1,35 @@
+<!--
+  JS плагин:
+  В эту категорию вношу решения, основанные на использовании различных js-плагинов: LightBox, ShadowBox,
+  YouCanActuallyGuessTheNameByYourselfBox и т.д.
+
+  Минимальный вариант - использование Dialog is jQuery UI. При росте градуса сумашествия:
+  для поддержки перемещения попапа по странице (при изменении размеров окна), или динамическом размере контента,
+  проблему адаптации можно решить методом "в лоб" - перерисовкой окна по событию.
+  
+  Плюсы: все ужасающие кросс-браузерные проблемы ложаться на плечи библиотеки
+         CSS уже в комплекте
+         можно написать тест (after all, it's just a code)
+  
+  Минусы: как правило, кусок весьма тяжелого JS
+          возможности кастомизации напрямую зависят от того, какой API предоставляет библиотека
+          конкретно этот пример не адаптивен
+          
+-->
+<!doctype html>
+<html>
+  <head>
+    <script src="../common/jquery-1.11.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="jquery-ui.css">
+  </head>
+  <body>
+    <div id="dialog">
+      <h1>Hola Gondola!</h2>
+      <p>Would you be so kindly to shut up?</p>
+      <p>Thank you, kind sir!</p>
+    </div>
+  </body>
+</html>
