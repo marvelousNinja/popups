@@ -1,0 +1,30 @@
+<!--
+  CSS решение:
+  Своего рода компиляция: псевдо inline-block для вертикального выравнивания, и margin: auto для горизонтального
+  В эту категорию внес бы все известные народу (и неизвестные мне) CSS хаки. В зависимости от глубины
+  отчаяния, в решения могут вносится browser-specific изменения.
+  
+  Плюсы: позиционирование целиком и полностью определяется CSS - никаких вычислений координат в JS
+         представленный вариант адаптивен
+  
+  Минусы: для кросс-браузерной поддержки иногда необходимо тащить тучу хлама
+          попап таки лежит на странице с самого начала
+-->
+<!doctype html>
+<html>
+  <head>
+    <script src="../common/jquery-1.11.1.min.js"></script>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="popup">
+        <a href="#" class="close">X</a>
+        <h1>Hola Gondola!</h2>
+        <p>Would you be so kindly to shut up?</p>
+        <p>Thank you, kind sir!</p>
+      </div>
+    </div>
+  </body>
+</html>
